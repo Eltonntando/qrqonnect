@@ -13,7 +13,7 @@
   body{
     padding: 0;
     margin: 0;
-    padding:  80px 50px;
+    padding:  25px 5px;
     background-image: linear-gradient(to right,#ef395b,#f14d45,#340bae);
   }
 
@@ -29,6 +29,7 @@
   overflow: hidden;
   box-shadow: 28px 20px 58px rgba(0, 0, 0, 0.2);
   text-align: center;
+  width: 85%;
 }
 
 /* left part*/
