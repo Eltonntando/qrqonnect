@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Baloo Tamma 2", cursive;
-  width: 100%;
+  border-width: 100%;
 }
 
   body{
@@ -248,6 +248,7 @@ img {
     top: 0;
     font-size: 0.9em;
     background-color: black;
+    width: 100%;
   }
 
     #nav ul {
