@@ -6,13 +6,19 @@
   font-family: "Baloo Tamma 2", cursive;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(to right,#ef395b,#f14d45,#340bae);
-}
+  * {
+    box-sizing: border-box;
+  }
+  body{
+    padding: 0;
+    margin: 0;
+    padding:  80px 50px;
+    background-image: linear-gradient(to right,#ef395b,#f14d45,#340bae);
+  }
+
+
+
+
 #container {
   display: flex;
   justify-content: center;
