@@ -34,8 +34,8 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 10rem;
-  height: 10rem;
+  width: 55rem;
+  height: 55rem;
 }
 #in {
   display: flex;
@@ -101,8 +101,8 @@ button:active {
 
 #right {
   background: red;
-  width: 10rem;
-  height: 10rem;
+  width: 55rem;
+  height: 55rem;
   
   align-items: center;
   justify-content: center;
@@ -249,6 +249,7 @@ img {
     font-size: 0.9em;
     background-color: black;
     width: 100%;
+    display: flex;
   }
 
     #nav ul {
