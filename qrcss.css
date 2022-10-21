@@ -21,13 +21,14 @@
 
 
 #container {
-  display: flex;
+  display: column;
   justify-content: center;
   align-items: center;
   background: white;
   border-radius: 7px;
   overflow: hidden;
   box-shadow: 28px 20px 58px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 /* left part*/
@@ -39,6 +40,7 @@
   flex-direction: column;
   width: 25rem;
   height: 25rem;
+  margin-left: 800px;
 }
 #in {
   display: flex;
@@ -109,6 +111,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 800px;
 }
 
 #image {
@@ -219,6 +222,7 @@ img {
   #logo {
     display: inline-block;
     margin-top: 10px;
+    margin-left: 450px;
   }
 
     #logo h1 {
