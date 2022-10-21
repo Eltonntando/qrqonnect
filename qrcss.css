@@ -41,7 +41,7 @@
   flex-direction: column;
   width: 25rem;
   height: 25rem;
-  margin-left: 300px;
+  margin-left: 5px;
 }
 #in {
   display: flex;
@@ -112,7 +112,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 300px;
+  margin-left: 5px;
 }
 
 #image {
