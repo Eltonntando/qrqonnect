@@ -4,13 +4,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Baloo Tamma 2", cursive;
-  border-width: 100%;
 }
 
+  * {
+    box-sizing: border-box;
+    border-width: 100%;
+  }
   body{
     padding: 0;
     margin: 0;
-    padding:  10px 5px;
+    padding:  80px 50px;
     background-image: linear-gradient(to right,#ef395b,#f14d45,#340bae);
   }
 
@@ -106,7 +109,6 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: under;
 }
 
 #image {
@@ -249,8 +251,6 @@ img {
     top: 0;
     font-size: 0.9em;
     background-color: black;
-    width: 100%;
-    display: flex;
   }
 
     #nav ul {
