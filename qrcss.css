@@ -18,9 +18,9 @@
   }
 
   .advise {
-    font-size: 8px;
-    margin top: -140px;
-    margin-bottom: -50px;
+    font-size: 12px;
+    margin top: -210px;
+    
     text-align: center;
     color: red;
     text-decoration: none;
@@ -100,7 +100,7 @@ input {
   flex-direction: row;
 }
 input::placeholder {
-  font-weight: 500;
+  font-weight: 350;
   font-size: large;
 }
 /* Button */
