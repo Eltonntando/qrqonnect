@@ -130,7 +130,7 @@ button:active {
 /* Right part */
 
 #right {
-  background: red;
+  background: white;
   width: 25rem;
   height: 25rem;
   display: flex;
