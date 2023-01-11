@@ -42,7 +42,14 @@
 
 }
 
+#contents {
+  margin-left: 6px;
+  padding: 50px;
+  align-self: center;
+}
+
 #container {
+  align-self: center;
   display: column;
   justify-content: center;
   align-items: center;
