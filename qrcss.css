@@ -8,7 +8,7 @@
 
   * {
     box-sizing: border-box;
-    border-width: 100%;
+    border-width: 90%;
   }
   body{
     padding: 0;
@@ -101,9 +101,10 @@ input {
   outline: 2px solid red;
   border: 0 outset;
   height: 2.3rem;
-  border-radius: 10px;
+  border-radius: 10px; 
   display: flex;
   flex-direction: row;
+  text-align: center;
 }
 input::placeholder {
   font-weight: 350;
@@ -151,6 +152,7 @@ button:active {
   height: 310px;
   background: black;
   border-radius: 7px;
+
 }
 img {
   border: black 5px solid;
