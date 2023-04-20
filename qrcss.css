@@ -110,6 +110,7 @@ input {
   display: flex;
   flex-direction: row;
   text-align: center;
+  margin: 15px;
 }
 input::placeholder {
   font-weight: 350;
@@ -130,6 +131,7 @@ button {
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
+  margin: 20px;
 }
 button:hover {
   background: black;
