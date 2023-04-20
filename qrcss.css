@@ -44,6 +44,7 @@
 
 #contents {
   margin-left: 6px;
+  margin-right: 6px;
   align-self: center;
 }
 
@@ -58,18 +59,21 @@
   box-shadow: 28px 20px 58px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 100%;
+  text-align: center;
 }
 
 /* left part*/
 
 #left {
   display: flex;
-  justify-content: flex-start;
+  justify-content: initial;
   align-items: center;
   flex-direction: column;
   width: 25rem;
   height: 25rem;
-  margin-left: 5px;
+  margin: 5px;
+  text-align: center;
+
 }
 #in {
   display: flex;
