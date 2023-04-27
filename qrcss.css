@@ -4,15 +4,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Baloo Tamma 2", cursive;
+  border-width: 90%;
 }
 
-  * {
-    box-sizing: border-box;
-    border-width: 90%;
-  }
   body{
     padding: 0;
-    margin: 0;
+    margin-right: 30px;
+    margin-left: 0px;
     padding:  25px 5px;
     background-image: linear-gradient(to right,#ef395b,#f14d45,#340bae);
   }
@@ -20,7 +18,6 @@
   .advise {
     font-size: 12px;
     margin top: -210px;
-    
     text-align: center;
     color: red;
     text-decoration: none;
@@ -44,7 +41,7 @@
 
 #contents {
   margin-left: 6px;
-  margin-right: 6px;
+  margin-right: 40px;
   align-self: center;
 }
 
