@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+<head>
 
-  <head>
+
 <link rel="shortcut icon" type="x-icon" href="Images/QonnectIcon.png">
-      <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QR code</title>
-    <!-- StyleSheet -->
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G7WB693WKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G7WB693WKF');
+</script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Qonnect.</title>
+    <!-- font awesome cdn  -->
+    <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
+
+    <!-- custom css  -->
     <link rel="stylesheet" href="qrcss.css" />
-    <!-- Font Awesome -->
- <script src="https://kit.fontawesome.com/61003df5a9.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
+</head>
+<body>
 
-<body class="is-preload homepage">
-    <div id="page-wrapper">
 
-      <!-- Header -->
-        <div id="header-wrapper">
-          <header id="header" class="container">
 
-            <!-- Logo -->
-              <div id="logo">
-                <img src="Images/QonnectIcon.png" width="100" height="100">
-                              </div>
-            <!-- Nav -->
-              <nav id="nav">
-                <ul>
-                  <li class="current"><a href="index.html">Home</a></li>
-                  <li><a href="About.html">About QR Codes</a></li>
-                  <li><a href="getqrcodes.html">Get Custom QR Code/s</a></li>
+
+
+
+    <!-- home page  -->
+    <div class="home-page">
+        <!-- header section  -->
+        <div class="header-section">
+            <!-- header logo  -->
+            <div class="logo">
+                 <img src="Images/QonnectIcon.png" alt="">
+            </div>
+
+            <!-- header navigation  -->
+            <div class="header-nav">
+                <div class="mobile-nav-bar">
+                    <i class="fa-solid fa-bars" id="mobile-nav-bar-icon"></i>
+                </div>
+                <ul class="header-nav-list" id="header-nav-list">
+                     <li class="header-nav-tab">
+                        <a href="About.html">About qr-codes</a>
+                    </li>
+                     <li class="header-nav-tab">
+                        <a href="getqrcodes.html" >Get Custom QR Code/s</a>
+                    </li >
+                     <li class="header-nav-tab">
+                        <a href="Contacts.html" >Contacts</a>
+                    </li >
+                    <span class="highlight"></span>
                 </ul>
-                <div class="section-social">
-  <p class="social-title">
-  <div class="social-media-icons">
-      <ul style="align-content: center;">
-        <li class="social-items"><a href="https://web.facebook.com/blossomvelder/"><i class="fa-brands fa-facebook"></i></a></li>
-        <li class="social-items"><a href="https://www.youtube.com/channel/UC5AzuVWZuJUGYBChW05UKNQ?view_as=subscriber"><i class="fa-brands fa-square-youtube"></i></a></li>
-        <li class="social-items"><a href="https://www.instagram.com/blossomvelder01/?hl=en"><i class="fa-brands fa-square-instagram"></i></i></a></li>
-      </ul>
-  </div>
+                <div class="mode-change">
+                    <i class="fa-solid fa-moon" id="mode-change"></i>
+                </div>
+            </div>
+        </div>
 </div>
 
-              </nav>
 
-          </header>
-        </div>
+<div class="contents" style="height: 100%;
+        padding: 20px;
+        overflow: hidden;">
 
-
-
-<div id="contents">
-    <div id="container">
+    <div id="container" style="text-align: center;">
       <div id="left">
         <div id="in">
           <h1 style="padding: 45px;">QR Code Generator</h1>
-          <p class="advise" style="text-align: center;">Here you can insert links, text and more. In case your content is much to type down all at once we advise you prepare it else where then copy and paste it here to convert it into an a ctive QR Code.</p>
+          <p class="advise" style="text-align: center; background-image: linear-gradient(to right,#ef395b,#f14d45,#340bae); color: white; ">Here you can insert links, text etc.</p>
                      <script>
 //long unit id
 var pubid = '1272920916917904';
@@ -87,19 +105,19 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 </script>
 
 
-          <input
+          <input style="padding: 10px;" 
             type="text"
             name=""
             id="text"
             placeholder="Enter Data"
             required
           />
-          <button onclick="qr()">
+          <button onclick="qr()" style="border: 3px solid white; padding: 7px; margin-left: 15px;">
             <i class="fa fa-qrcode" aria-hidden="true"></i>
             Generate QR Code
           </button>
         </div>
-       <p class="instruction" style=" color: white; border-radius: 10px; font-size: 22px; outline-color: black; text-decoration: none; text-align: center; align-content: center;">Long-click or right-click the qr code 
+       <p class="instruction" style=" color: black;margin-top: 10px; border-radius: 10px; font-size: 15px; outline-color: black; text-decoration: none; text-align: center; align-content: center;">Long-click or right-click the qr code 
          to save it<i class="fa fa-download"></i>  
          </p>
       </div>
@@ -115,9 +133,9 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 </div>
 
     
-         <div class="profile-header-ig">
+         <div class="profile-header-ig" style="text-align: center; margin-top: 8px;">
         
-  <a href="https://play.google.com/store/apps/details?id=io.kodular.eltonntando.QonnectQRScanner&gl=ZA" style="text-decoration: none; color: white; font-weight: bolder;">CLICK TO DOWNLOAD QR CODE QONNECT QR CODE SCANNER & GENERATOR APP FROM GOOGLEPLAY STORE!</a>
+  <button style="border: none;"><a href="https://play.google.com/store/apps/details?id=io.kodular.eltonntando.QonnectQRScanner&gl=ZA" style="text-decoration: none; color: white; font-weight: bolder;">CLICK TO DOWNLOAD QR CODE QONNECT QR CODE SCANNER & GENERATOR APP FROM GOOGLEPLAY STORE!</a></button>
 
       </div>
 
@@ -154,25 +172,52 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 
 
 
+</div>
 
 
 
+<div class="social-icon-list">
+                <a href="https://web.facebook.com/blossomvelder/" style="color: black;"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/blossomvelder01/?hl=en" style="color: black;"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UC5AzuVWZuJUGYBChW05UKNQ?view_as=subscriber" style="color: black;"><i class="fa-brands fa-square-youtube"></i></a>
+            </div>
+        </div>
+    </div>
 
-                  <section class="widget links">
+
+<div class="outer-footer">
+  <div class="widget links">
                     <ul class="style2">
-                      <li><a href="https://www.termsfeed.com/live/ef1a87fc-9003-4875-8bf8-56303fb09a81">Privacy Policy</a></li>
-                      <li><a href="https://www.termsfeed.com/live/34b6d1d1-c7fa-4ae8-9125-2c09f5a14e86">terms</a></li>
+                       <li><a href="https://www.termsfeed.com/live/ef1a87fc-9003-4875-8bf8-56303fb09a81" style="color: black;">Privacy Policy</a></li>
+                      <li><a href="https://www.termsfeed.com/live/34b6d1d1-c7fa-4ae8-9125-2c09f5a14e86" style="color: black;">terms</a></li>
                     </ul>
-                    <footer>
-    <p class="footer">&copy; 2022 @qrqonnect. All rights reserved. Design by blossom velder pty Ltd.</p>
-  </footer>
-                  </section>
-    
-              </div>
+                  </div>
+<footer>
+</div>
 
-  
+<p style="font-size: x-small; background-color: transparent; text-align: center; border: none;">+27 65 737 1848</p>
 
+<p style="font-size: x-small; background-color: transparent; text-align: center; border: none;">South Africa<br>Mbombela<br>Mpumalanga<br>1352</p>
+
+
+            <div class="buttons" style="text-align: center;">
+                <button onclick="window.location.href='https://web.facebook.com/blossomvelder/';" style="border: 2px solid black; background-color: transparent; border-radius: 11px; color: black;">
+                    <i class="fa-brands fa-square-facebook" style=" background-color: transparent; border-radius: 11px; color: black;"></i>Facebook
+                </button>
+
+                <button onclick="window.location.href='https://www.instagram.com/blossomvelder01/?hl=en';" style="border: 2px solid black; background-color: transparent; border-radius: 11px; color: black;">
+                    <i class="fa-brands fa-square-instagram" style=" background-color: transparent; border-radius: 11px; color: black;"></i>Instagram
+                </button>
+                
+                 <button onclick="window.location.href='https://www.youtube.com/channel/UC5AzuVWZuJUGYBChW05UKNQ?view_as=subscriber';" style="border: 2px solid black; background-color: transparent; border-radius: 11px; color: black;">
+                    <i class="fa-brands fa-square-youtube" style=" background-color: transparent; border-radius: 11px; color: black;"></i>YouTube
+                </button>
+            </div>
+    <p style="font-size: x-small; background-color: transparent; text-align: center; border: none;">Copyright &copy; 2022 @qrqonnect <a href="https://www.blossomvelder.co.za">@Blossom Velder pty, Ltd.</a> All Rigths Reserved</p>
+  </div>
+</footer> 
     <!-- Script JS -->
+    <script src="site.js"></script>
     <script src="qrjava.js"></script>
-  </body>
+</body>
 </html>
