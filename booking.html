@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" type="x-icon" href="Images/QonnectIcon.png">
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code booking</title>
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="qrcss.css" />
+  <!-- Font Awesome icon cdn -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://kit.fontawesome.com/61003df5a9.js" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <style>
+    .share-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      display: inline-block;
+      align-self: left;
+      margin-right: 70%;
+      margin-bottom: 5%;
+    }
+
+    .social-platforms {
+      display: none;
+    }
+
+    .social-platforms.show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .social-platforms a {
+      margin: 8px;
+      color: white;
+      font-size: 30px;
+    }
+  </style>
+  <script>
+    function showSocialPlatforms() {
+      const socialPlatforms = document.querySelector('.social-platforms');
+      socialPlatforms.classList.toggle('show');
+    }
+
+    function shareLink(platform) {
+      var linkToShare = "https://qrqonnect.co.za/booking.html"; // Replace with your link to share
+      var socialUrl;
+
+      if (platform === 'facebook') {
+        socialUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(linkToShare);
+      } else if (platform === 'instagram') {
+        socialUrl = 'https://www.instagram.com/share?url=' + encodeURIComponent(linkToShare);
+      } else if (platform === 'email') {
+        socialUrl = 'mailto:?body=' + encodeURIComponent(linkToShare);
+      } else if (platform === 'whatsapp') {
+        socialUrl = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(linkToShare);
+      }
+
+      window.open(socialUrl, '_blank');
+    }
+  </script>
+
+</head>
+
+  <title>Booking Section</title>
+  <style>
+      .container {
+      width: 400px;
+      margin: 0 auto;
+      background-color: lightgray;
+      padding: 15px;
+      border-radius: 14px;
+      padding-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+        button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+    }
+
+    .booking-message {
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+
+  </style>
+<script>
+    function sendBookingDetails() {
+      var clientName = document.getElementById('client-name').value;
+      var contactNumber = document.getElementById('contact-number').value;
+      var emailAddress = document.getElementById('email-address').value;
+      var eventDescription = document.getElementById('event-description').value;
+      var eventDate = document.getElementById('event-date').value;
+
+      var message = "Client Name: " + clientName + "\n"
+            + "Contact Number: " + contactNumber + "\n"
+            + "Email Address: " + emailAddress + "\n"
+            + "Service/Event Name & Description: " + eventDescription + "\n"
+            + "Event Date: " + eventDate;
+
+
+ // Insert site owner's contacts for: WhatsApp & E-mail
+
+      var emailLink = "mailto:eltonntando@gmail.com?subject=Booking Request&body=" + encodeURIComponent(message);
+      var whatsappLink = "https://wa.me/+27793795379/?text=" + encodeURIComponent(message);
+      var platform = document.getElementById('platform').value;
+      
+      if (platform === 'email') {
+        // Open the email link in a new tab/window
+        window.open(emailLink, '_blank');
+      } else if (platform === 'whatsapp') {
+        // Open the WhatsApp link in a new tab/window
+        window.open(whatsappLink, '_blank');
+      }
+      
+      // Display the booking details in a distinct style
+      var bookingMessageElement = document.createElement('div');
+      bookingMessageElement.classList.add('booking-message');
+      bookingMessageElement.textContent = message;
+      document.body.appendChild(bookingMessageElement);
+    }
+  </script>
+</head>
+<body>
+
+            <div class="logo">
+                 <h1>QR Qonnect.</h1>
+            </div>
+
+
+  <div class="wrapper">
+    <div class="page">
+  <div class="cover" style="height: auto; width: auto; background-color: transparent; border-radius: 95px; margin-top: 20px;">
+    </div>
+
+      <div class="buttons" style="text-align: center;">
+        <button onclick="window.location.href='About.html';">
+          <i class="fa fa-qrcode"></i>About qr-codes
+        </button>
+
+      <button onclick="window.location.href='index.html';">
+          <i class="fa-solid fa-house"></i>Home
+        </button>
+      </div>
+      
+      
+        
+
+<div class="selection-links" style="align-items: center; margin-top: 10px;">
+  <div class="link new-link" style="text-align: center;">
+<div class="items" style="text-align: center;">
+
+</div>
+
+  <div class="container">
+    <h2>Booking Section</h2>
+    <label for="event-name">Name:</label>
+    <input type="text" id="client-name">
+
+    <label for="contact-number">Contact number:</label>
+    <input type="text" id="contact-number">
+
+    <label for="email-address">E-mail Address:</label>
+    <input type="text" id="email-address">
+
+    <label for="event-description">QR Code usage & Description:</label>
+    <textarea id="event-description"></textarea>
+
+    <label for="event-date">Date needed:</label>
+    <input type="text" id="event-date">
+
+    <label for="platform">Send via:</label>
+    <select id="platform">
+      <option value="email">Email</option>
+      <option value="whatsapp">WhatsApp</option>
+    </select>
+  </div>
+    <button onclick="sendBookingDetails()"><i class="fa-solid fa-paper-plane"></i></button>
+  </div>
+</div>
+
+
+
+<!-- Insert site/plug sharing links -->
+
+<div class="share-button" onclick="showSocialPlatforms()"><i class="fas fa-share"></i>Share Plug</div>
+  <div class="social-platforms">
+    <a href="https://qrqonnect.co.za/booking.html" onclick="shareLink('facebook')"><i class="fab fa-facebook" style="color: blue; font-size: 70px;"></i></a>
+    <a href="https://qrqonnect.co.za/booking.html" onclick="shareLink('instagram')"><i class="fab fa-instagram" style="color: purple; font-size: 70px;"></i></a>
+    <a href="https://qrqonnect.co.za/booking.html" onclick="shareLink('email')"><i class="fas fa-envelope" style="color: red; font-size: 70px;"></i></a>
+    <a href="https://qrqonnect.co.za/booking.html" onclick="shareLink('whatsapp')"><i class="fab fa-whatsapp" style="color: green; font-size: 70px;"></i></a>
+  </div>
+</div>
+
+<div class="gallaries" style="text-align: center;">
+<img src="Images/QonnectIcon.png" style="text-align: center; width: 40px; height: auto; margin-top: 10px;">
+</div>
+
+<iframe id=""src="" frameborder="0"></iframe>
+<div class="widget" style="font-size: 7px; margin-top: 5px;">
+                    <ul class="style2">
+                      <li><a href="https://www.termsfeed.com/live/1ab1c651-5b25-43e4-8812-d7e8658a1dd3">Privacy Policy</a></li>
+                      <li><a href="https://www.termsfeed.com/live/07228ddf-8948-43c8-8992-679d5a7536e2">terms</a></li>
+                    </ul>
+                  </div>
+    </div>
+
+  <footer>
+<div class="outer-footer">
+    <p style="font-size: x-small; border: none; background-color: transparent;">  Copyright &copy; 2023 <a href="https://www.blossomvelder.co.za">@Blossom Velder pty, Ltd.</a> All Rigths Reserved</p>
+  </div>
+    </div>        
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
