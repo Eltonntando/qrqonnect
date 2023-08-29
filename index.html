@@ -136,33 +136,31 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 </script>
 
 
-          <input style="padding: 10px;" 
-            type="text"
-            name=""
-            id="text"
-            placeholder="Enter Data"
-            required
-          />
-          <button onclick="qr()" style="border: 3px solid white; padding: 7px; margin-left: 15px;">
-            <i class="fa fa-qrcode" aria-hidden="true"></i>
-            Generate QR Code
-          </button>
-        </div>
-       <p class="instruction" style=" color: black;margin-top: 10px; border-radius: 10px; font-size: 15px; outline-color: black; text-decoration: none; text-align: center; align-content: center;">Click the download qr code 
-        button to save qr code<i class="fa fa-download"></i>  
-         </p>
-      </div>
-      <!-- ... Previous HTML code ... -->
+          <div>
+  <input style="padding: 10px;" 
+    type="text"
+    id="text"
+    placeholder="Enter Data"
+    required
+  />
+  <button onclick="generateQR()" style="border: 3px solid white; padding: 7px; margin-left: 15px;">
+    <i class="fa fa-qrcode" aria-hidden="true"></i>
+    Generate QR Code
+  </button>
+</div>
+<p class="instruction" style="color: black; margin-top: 10px; border-radius: 10px; font-size: 15px; outline-color: black; text-decoration: none; text-align: center; align-content: center;">
+  Click the download button or long-click or right-click the QR code to save after generating
+  <i class="fa fa-download"></i>
+</p>
 
-<div id="right" style="text-align: center;">
-  <div id="image" style="margin-top: 5px; margin-bottom: 5px;">
+<div style="text-align: center;">
+  <div style="margin-top: 5px; margin-bottom: 5px;">
     <img
       id="qrImage"
-      src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=neogorithm"
-      alt=""
+      src=""
+      alt="Generated QR Code"
     />
   </div>
-  
   <a id="downloadButton" download="qrcode.png">
     <button style="border: 3px solid white; padding: 7px; margin-top: 10px;">
       <i class="fa fa-download"></i> Download
@@ -170,19 +168,19 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
   </a>
 </div>
 
-<!-- ... More HTML code ... -->
-
 <script>
-function qr() {
-  var t = document.getElementById("text").value;
+function generateQR() {
+  var textValue = document.getElementById("text").value;
   var qrImage = document.getElementById("qrImage");
-  qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${t}`;
-  
   var downloadButton = document.getElementById("downloadButton");
-  var dataURL = qrImage.src;
-  downloadButton.href = dataURL;
+
+  var qrDataURL = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(textValue)}`;
+  
+  qrImage.src = qrDataURL;
+  downloadButton.href = qrDataURL;
 }
 </script>
+
 
     </div>
 </div>
