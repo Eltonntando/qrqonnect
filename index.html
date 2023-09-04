@@ -53,7 +53,7 @@
                         <a href="About.html">About qr-codes</a>
                     </li>
                      <li class="header-nav-tab">
-                        <a href="getqrcodes.html" >Get Custom QR Code/s</a>
+                        <a href="getqrcodes.html" >Get Dynamic QR Code/s</a>
                     </li >
                     <span class="highlight"></span>
                 </ul>
@@ -72,7 +72,7 @@
     <div id="container" style="text-align: center;">
       <div id="left">
         <div id="in">
-          <h1 style="padding: 45px;">QR Code Generator</h1>
+          <h1 style="padding: 45px;">QR Code Qonnect</h1>
 
 
                   <script>
@@ -104,7 +104,7 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 
 
 
-          <p class="advise" style="text-align: center; background-image: linear-gradient(to right,#ef395b,#f14d45,#340bae); color: white; ">Here you can insert links, text etc.</p>
+          <p class="advise" style="text-align: center; background-image: linear-gradient(to right,#ef395b,#f14d45,#340bae); color: white; ">For all your QR Code needs</p>
                      <script>
 //long unit id
 var pubid = '1272920916917904';
@@ -133,50 +133,16 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 </script>
 
 
-          <div>
-  <input style="padding: 10px;" 
-    type="text"
-    id="text"
-    placeholder="Enter Data"
-    required
-  />
-  <button onclick="generateQR()" style="border: 3px solid white; padding: 7px; margin-left: 15px;">
-    <i class="fa fa-qrcode" aria-hidden="true"></i>
-    Generate QR Code
-  </button>
-</div>
-<p class="instruction" style="color: black; margin-top: 10px; border-radius: 10px; font-size: 15px; outline-color: black; text-decoration: none; text-align: center; align-content: center;">
-  Click the download button or long-click or right-click the QR code to save after generating
-  <i class="fa fa-download"></i>
-</p>
+                  <div>
+                 <button onclick="window.location.href='index2.html';"  style="align-content: center; background-color: red; color: white; border-radius: 15px; border: none; margin-top: 30px; font-size: 35px;"><i class="fa fa-qrcode">
+                    </i>Generate QR Code</button>
+                 </div>
 
-<div style="text-align: center;">
-  <div style="margin-top: 5px; margin-bottom: 5px;">
-    <img
-      id="qrImage"
-      src=""
-      alt="Generated QR Code"
-    />
-  </div>
-  <a id="downloadButton" download="qrcode.png">
-    <button style="border: 3px solid white; padding: 7px; margin-top: 10px;">
-      <i class="fa fa-download"></i> Download
-    </button>
-  </a>
-</div>
 
-<script>
-function generateQR() {
-  var textValue = document.getElementById("text").value;
-  var qrImage = document.getElementById("qrImage");
-  var downloadButton = document.getElementById("downloadButton");
-
-  var qrDataURL = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(textValue)}`;
-  
-  qrImage.src = qrDataURL;
-  downloadButton.href = qrDataURL;
-}
-</script>
+                  <div>
+                 <button onclick="window.location.href='scan.html';"  style="align-content: center; background-color: red; color: white; border-radius: 15px; border: none; margin-top: 30px; font-size: 35px;"><i class="fa fa-qrcode">
+                    </i>Scan QR Code</button>
+                 </div>
 
 
     </div>
@@ -223,16 +189,6 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 
 
 </div>
-
-
-
-<div class="social-icon-list">
-                <a href="https://web.facebook.com/blossomvelder/" style="color: black;"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="https://www.instagram.com/blossomvelder01/?hl=en" style="color: black;"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UC5AzuVWZuJUGYBChW05UKNQ?view_as=subscriber" style="color: black;"><i class="fa-brands fa-square-youtube"></i></a>
-            </div>
-        </div>
-    </div>
 
 
 <div class="outer-footer">
