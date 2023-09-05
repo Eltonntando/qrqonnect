@@ -201,9 +201,14 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 </div>
 
 
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+
+
 
   <script type="text/javascript">
-    function generateQR() {
+
+function generateQR() {
   var fileName = document.getElementById("fileName").value;
   var fileInput = document.getElementById("fileInput");
   var qrImage = document.getElementById("qrImage");
@@ -218,11 +223,22 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
       var fileURL = e.target.result;
       var textValue = `File Name: ${fileName}\nFile URL: ${fileURL}`;
 
-      // Create a QR code for the file URL
-      var qrDataURL = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(textValue)}`;
-      
-      qrImage.src = qrDataURL;
-      downloadButton.href = qrDataURL;
+      // Create a QR code for the file URL using qrcode-generator
+      var qrcode = new QRCode(qrImage, {
+        text: textValue,
+        width: 300,
+        height: 300,
+      });
+
+      // You can also set error correction level if needed, e.g.,:
+      // var qrcode = new QRCode(qrImage, {
+      //   text: textValue,
+      //   width: 300,
+      //   height: 300,
+      //   correctLevel: QRCode.CorrectLevel.H // High error correction
+      // });
+
+      downloadButton.href = qrImage.getElementsByTagName('img')[0].src;
     };
 
     reader.readAsDataURL(file);
@@ -231,7 +247,10 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
   }
 }
 
-  </script>
+</script>
+
+
+
 
   </div>
 
