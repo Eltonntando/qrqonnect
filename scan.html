@@ -75,56 +75,44 @@
         padding: 20px;
         overflow: hidden;">
 
-    <div id="container" style="text-align: center;">
-      <div id="left">
-        <div id="in">
-
-<div>
-    <h1>QR Code Scanner</h1>
-    <button id="scanButton" style="align-content: center; background-color: red; color: white; border-radius: 15px; border: none; margin-top: 30px; font-size: 40px;"><i class="fa fa-qrcode">
+  <div id="container" style="text-align: center;">
+    <h1 style="text-align: center;">QR Code Scanner</h1>
+    <button id="scan-qr" style="align-content: center; background-color: red; color: white; border-radius: 15px; border: none; margin-top: 30px; font-size: 35px;"><i class="fa fa-qrcode">
                     </i>Scan QR Code</button>
+    <div id="qr-result"></div>
+  </div>
 
+  <script>
+    const qrcode = window.qrcode;
+    const video = document.querySelector("#qr-canvas");
+    const canvas = video.getContext("2d");
+    const qrResult = document.querySelector("#qr-result");
+    const scanQRButton = document.querySelector("#scan-qr");
 
+    let scanning = false;
 
+    scanQRButton.onclick = () => {
+      scanning = true;
+      qrResult.hidden = true;
+      video.hidden = false;
 
+      navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+        .then(stream => {
+          video.srcObject = stream;
+          video.play();
 
-    <video id="preview" style="display: none;"></video>
-</div>  
-    <script type="text/javascript">
-        // Function to start the QR code scanner
-        function startQRScanner() {
-            const scanButton = document.getElementById('scanButton');
-            const video = document.getElementById('preview');
-            const scanner = new Instascan.Scanner({ video: video });
-
-            // Handle QR code detection
-            scanner.addListener('scan', function (content) {
-                // Redirect to the scanned QR code content
-                window.location.href = content;
-            });
-
-            // Start the camera feed when the button is clicked
-            scanButton.addEventListener('click', function () {
-                Instascan.Camera.getCameras()
-                    .then(function (cameras) {
-                        if (cameras.length > 0) {
-                            video.style.display = 'block'; // Show the video feed
-                            scanner.start(cameras[0]); // Use the first available camera
-                        } else {
-                            console.error('No cameras found.');
-                            alert('No cameras found.');
-                        }
-                    })
-                    .catch(function (error) {
-                        console.error(error);
-                        alert('Error accessing the camera: ' + error);
-                    });
-            });
-        }
-
-        // Initialize the QR scanner
-        startQRScanner();
-    </script>
+          qrcode.decode(canvas, (result) => {
+            if (result) {
+              qrResult.hidden = false;
+              qrResult.textContent = result;
+            }
+          });
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    };
+  </script>
 
 
 
