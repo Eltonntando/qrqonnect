@@ -17,6 +17,7 @@
 
 
 
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -155,53 +156,50 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 }
 </script>
 
-
-
-
-<div>
-  <input style="padding: 10px;" 
-    type="text"
-    id="fileName"
-    placeholder="Enter File Name"
-    required
-  />
-  <input style="padding: 10px;" 
-    type="file"
-    id="fileInput"
-    accept=".pdf, .jpg, .jpeg, .png, .mp4, .avi, .doc, .docx" 
-    required
-  />
-
-  <!-- Specify accepted file types here -->
-
-
-  <button onclick="generateQR()" style="border: 3px solid white; padding: 7px; margin-left: 15px;">
-    <i class="fa fa-qrcode" aria-hidden="true"></i>
-    Generate QR Code
-  </button>
-</div>
-<p class="instruction" style="color: black; margin-top: 10px; border-radius: 10px; font-size: 15px; outline-color: black; text-decoration: none; text-align: center; align-content: center;">
-  Click the download button or long-click or right-click the QR code to save after generating
-  <i class="fa fa-download"></i>
-</p>
-
-<div style="text-align: center;">
-  <div style="margin-top: 5px; margin-bottom: 5px;">
-    <img
-      id="qrImage"
-      src=""
-      alt="Generated QR Code"
+  <div>
+    <input style="padding: 10px;" 
+      type="text"
+      id="fileName"
+      placeholder="Enter File Name"
+      required
     />
-  </div>
-  <a id="downloadButton" download="qrcode.png">
-    <button style="border: 3px solid white; padding: 7px; margin-top: 10px;">
-      <i class="fa fa-download"></i> Download
+    <input style="padding: 10px;" 
+      type="file"
+      id="fileInput"
+      accept=".pdf, .jpg, .jpeg, .png, .mp4, .avi, .doc, .docx" 
+      required
+    />
+
+    <!-- Specify accepted file types here -->
+
+
+    <button onclick="generateQR()" style="border: 3px solid white; padding: 7px; margin-left: 15px;">
+      <i class="fa fa-qrcode" aria-hidden="true"></i>
+      Generate QR Code
     </button>
-  </a>
-</div>
+  </div>
+  <p class="instruction" style="color: black; margin-top: 10px; border-radius: 10px; font-size: 15px; outline-color: black; text-decoration: none; text-align: center; align-content: center;">
+    Click the download button or long-click or right-click the QR code to save after generating
+    <i class="fa fa-download"></i>
+  </p>
+
+  <div style="text-align: center;">
+    <div style="margin-top: 5px; margin-bottom: 5px;">
+      <img
+        id="qrImage"
+        src=""
+        alt="Generated QR Code"
+      />
+    </div>
+    <a id="downloadButton" download="qrcode.png">
+      <button style="border: 3px solid white; padding: 7px; margin-top: 10px;">
+        <i class="fa fa-download"></i> Download
+      </button>
+    </a>
+  </div>
 
 
-<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 
 
 
@@ -228,15 +226,8 @@ function generateQR() {
         text: textValue,
         width: 300,
         height: 300,
+        errorCorrectionLevel: QRCode.CorrectLevel.H // High error correction
       });
-
-      // You can also set error correction level if needed, e.g.,:
-      // var qrcode = new QRCode(qrImage, {
-      //   text: textValue,
-      //   width: 300,
-      //   height: 300,
-      //   correctLevel: QRCode.CorrectLevel.H // High error correction
-      // });
 
       downloadButton.href = qrImage.getElementsByTagName('img')[0].src;
     };
@@ -250,9 +241,6 @@ function generateQR() {
 </script>
 
 
-
-
-  </div>
 
 
 
