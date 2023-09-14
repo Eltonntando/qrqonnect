@@ -135,27 +135,15 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 }
 </script>
 
-<div>
-  <input style="padding: 10px; margin-bottom: 9px;"
+
+          <div>
+  <input style="padding: 10px;" 
     type="text"
     id="text"
     placeholder="Enter Data"
     required
   />
-
-</div>
-
-
-
-  <input style="padding-left: 10px;" type="file"
-    id="logo"
-    accept="image/*"
-  />
-
-</div>
-
-
-  <button onclick="generateQR()" style="border: 3px solid white; padding: 7px; margin-left: 15px; margin-top: 9px;">
+  <button onclick="generateQR()" style="border: 3px solid white; padding: 7px; margin-left: 15px;">
     <i class="fa fa-qrcode" aria-hidden="true"></i>
     Generate QR Code
   </button>
@@ -183,27 +171,19 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 <script>
 function generateQR() {
   var textValue = document.getElementById("text").value;
-  var logo = document.getElementById("logo").files[0];
   var qrImage = document.getElementById("qrImage");
   var downloadButton = document.getElementById("downloadButton");
 
-  // Create a QR code generator that supports logos
-  var qrGenerator = new QRious({
-    element: qrImage,
-    logo: logo,
-  });
-
-  // Generate the QR code with the specified text and logo
-  qrGenerator.toDataURL(textValue, function(qrDataURL) {
-    // Set the QR code image source
-    qrImage.src = qrDataURL;
-
-    // Set the download button href
-    downloadButton.href = qrDataURL;
-  });
+  var qrDataURL = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(textValue)}`;
+  
+  qrImage.src = qrDataURL;
+  downloadButton.href = qrDataURL;
 }
 </script>
 
+
+    </div>
+</div>
 
     
          <div class="profile-header-ig" style="text-align: center; margin-top: 8px;">
