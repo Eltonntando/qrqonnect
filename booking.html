@@ -135,9 +135,9 @@
  // Insert site owner's contacts for: WhatsApp & E-mail
 
       var emailLink = "mailto:eltonntando@gmail.com?subject=Booking Request&body=" + encodeURIComponent(message);
-      var whatsappLink = "https://wa.me/+27793795379/?text=" + encodeURIComponent(message);
+      var whatsappLink = "https://wa.me/0764616051/?text=" + encodeURIComponent(message);
       var platform = document.getElementById('platform').value;
-      
+
       if (platform === 'email') {
         // Open the email link in a new tab/window
         window.open(emailLink, '_blank');
@@ -145,7 +145,7 @@
         // Open the WhatsApp link in a new tab/window
         window.open(whatsappLink, '_blank');
       }
-      
+
       // Display the booking details in a distinct style
       var bookingMessageElement = document.createElement('div');
       bookingMessageElement.classList.add('booking-message');
@@ -168,6 +168,10 @@
 
       <div class="buttons" style="text-align: center;">
         <button onclick="window.location.href='About.html';">
+          <i class="fa fa-qrcode"></i>bookings
+        </button>
+
+        <button onclick="window.location.href='About.html';">
           <i class="fa fa-qrcode"></i>About qr-codes
         </button>
 
@@ -175,9 +179,9 @@
           <i class="fa-solid fa-house"></i>Home
         </button>
       </div>
-      
-      
-        
+
+
+
 
 <div class="selection-links" style="align-items: center; margin-top: 10px;">
   <div class="link new-link" style="text-align: center;">
@@ -242,7 +246,7 @@
 <div class="outer-footer">
     <p style="font-size: x-small; border: none; background-color: transparent;">  Copyright &copy; 2023 <a href="https://www.blossomvelder.co.za">@Blossom Velder pty, Ltd.</a> All Rigths Reserved</p>
   </div>
-    </div>        
+    </div>
       </div>
     </div>
   </div>
